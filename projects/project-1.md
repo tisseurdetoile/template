@@ -19,25 +19,43 @@ Le premier but est de fournir une API simple rétrocompatible avec **spring-batc
 
 Le deuxième but est de fournir des outils pour la manipulation des éléments courants pour les batch comme les fichiers COBOL (fichier à taille fixe) avec le [FixedLineTokenizerBuilder](https://github.com/tisseurdetoile/socle-batch/blob/master/springbatch-socle-tools/src/main/java/net/tisseurdetoile/batch/socle/tools/fixedlinetokenizer/FixedLineTokenizerBuilder.java) qui facilite la création du FixedLineTokenizer correspondant.
 
-La mise en route est aussi simple que de rajouter ces librairies dans votre pom.xml
+## Exemple d'usage
 
-Pour l'API :
+- Lister les jobs : curl -X GET http://localhost:8080/jobs/
+- Lancer les Jobs : curl -X POST http://localhost:8080/jobs/SampleJob.json
+- Monitorer l'execution : curl -X GET http://localhost:8080/executions/1.json
+- Stoper l'execution : curl -X DELETE http://localhost:8080/executions/1.json
+
+## Installation
+
+La mise en route est aussi simple que de rajouter ceci dans votre pom.xml
 
 ```xml
        <dependency>
            <groupId>net.tisseurdetoile.batch</groupId>
            <artifactId>springbatch-socle-jsonapi</artifactId>
-           <version>0.2</version>
+           <version>0.3</version>
        </dependency>
 ```
 
-Pour les outils :
+Et cette annotation @EnableSpringBatchSocleApi dans la classe main.
+
+```java
+@SpringBootApplication
+@EnableSpringBatchSocleApi
+public class SampleApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SampleApplication.class, args);
+    }
+}
+```
+
+Pour les outils vous pouvez ajouter la dépendance
 
 ```xml
      <dependency>
            <groupId>net.tisseurdetoile.batch</groupId>
            <artifactId>springbatch-socle-tools</artifactId>
-           <version>0.2</version>
+           <version>0.3</version>
        </dependency>
-
 ```
