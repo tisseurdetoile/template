@@ -28,34 +28,5 @@ Le deuxième but est de fournir des outils pour la manipulation des éléments c
 
 ## Installation
 
-La mise en route est aussi simple que de rajouter ceci dans votre pom.xml
-
-```xml
-       <dependency>
-           <groupId>net.tisseurdetoile.batch</groupId>
-           <artifactId>springbatch-socle-jsonapi</artifactId>
-           <version>0.3</version>
-       </dependency>
-```
-
-Et cette annotation @EnableSpringBatchSocleApi dans la classe main.
-
-```java
-@SpringBootApplication
-@EnableSpringBatchSocleApi
-public class SampleApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(SampleApplication.class, args);
-    }
-}
-```
-
-Pour les outils vous pouvez ajouter la dépendance
-
-```xml
-     <dependency>
-           <groupId>net.tisseurdetoile.batch</groupId>
-           <artifactId>springbatch-socle-tools</artifactId>
-           <version>0.3</version>
-       </dependency>
-```
+La mise en route est aussi simple que de rajouter une dépendance dans votre pom.xml et rajouter une annotation.
+Vous pouvez vous référer au ReadMe du projets [ici](https://github.com/tisseurdetoile/socle-batch#installation)

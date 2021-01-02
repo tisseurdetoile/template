@@ -17,4 +17,6 @@ summary: Le meilleur moyen d'avoir un retroplanning annuel compacte (il tient su
 
 C'est un très bon outils pour faire rapidement un rétro-planning ou simplement s'organiser ses vacances. Il est disponnible en fichier libreOffice, pdf et excel.
 
+Un générateur en ligne est disponible [ici](http://github.tisseurdetoile.net/compactcalendarvue3/) et les sources [là](https://github.com/tisseurdetoile/compactcalendarvue3)
+
 ![exemple](/images/compactCalendar.png)
